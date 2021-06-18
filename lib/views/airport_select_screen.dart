@@ -70,6 +70,7 @@ class _AirportSelectScreenState extends State<AirportSelectScreen> {
 
   Widget _renderAirportSelect(context, List<AirportViewModel> airportList) {
     double screenWidth = MediaQuery.of(context).size.width;
+    airportList.sort((a, b) => a.airportName.compareTo(b.airportName));
 
     return Consumer<UserSelectionViewModel>(builder: (context, state, child) {
       return DropdownButton<AirportViewModel>(
@@ -96,7 +97,7 @@ class _AirportSelectScreenState extends State<AirportSelectScreen> {
             context,
             MaterialPageRoute(
               builder: (_) => FlightSelectScreen(
-                iataCode: state.selectedAirport.iataCode,
+                iataCode: state.selectedAirport.iataCode, client: widget.client,
               ),
             ),
           );
