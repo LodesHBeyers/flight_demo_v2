@@ -28,7 +28,7 @@ void main() {
           when(mockClient.get(any))
               .thenAnswer((realInvocation) async => http.Response('', 404));
 
-          final result = WebServices.fetchFlights(client: mockClient);
+          final result = WebServices.fetchFlights(client: mockClient, iataCode: '');
 
           expect(result, throwsException);
         },
@@ -40,7 +40,7 @@ void main() {
           when(mockClient.get(any)).thenAnswer((realInvocation) async =>
               http.Response(jsonEncode(mockFlightsData), 200));
 
-          final result = await WebServices.fetchFlights(client: mockClient);
+          final result = await WebServices.fetchFlights(client: mockClient, iataCode: '');
 
           expect(result, isA<List<Flight>>());
         },
@@ -52,7 +52,7 @@ void main() {
           when(mockClient.get(any))
               .thenAnswer((realInvocation) async => http.Response('', 404));
 
-          final result = WebServices.fetchMoreFlights(client: mockClient);
+          final result = WebServices.fetchMoreFlights(client: mockClient, iataCode: '', offset: 0);
 
           expect(result, throwsException);
         },
@@ -64,7 +64,7 @@ void main() {
           when(mockClient.get(any)).thenAnswer((realInvocation) async =>
               http.Response(jsonEncode(mockFlightsData), 200));
 
-          final result = await WebServices.fetchMoreFlights(client: mockClient);
+          final result = await WebServices.fetchMoreFlights(client: mockClient, iataCode: '', offset: 0);
 
           expect(result, isA<List<Flight>>());
         },
