@@ -112,7 +112,7 @@ void main() {
                 TextButton(
                   key: Key('button2'),
                   onPressed: () async {
-                    await airportListViewModel.loadMoreFlights(client: mockClient, iataCode: '');
+                    await airportListViewModel.loadMoreFlights(client: mockClient, iataCode: '', offset: 0);
                     setVal = airportListViewModel.flightList.length;
                   },
                   child: Text('Button'),

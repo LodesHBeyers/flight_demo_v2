@@ -16,8 +16,8 @@ class FlightListViewModel with ChangeNotifier{
     notifyListeners();
   }
 
-  Future loadMoreFlights({required Client client, required String iataCode}) async{
-    List<Flight> flights = await WebServices.fetchMoreFlights(client: client, iataCode: iataCode);
+  Future loadMoreFlights({required Client client, required String iataCode, required int offset}) async{
+    List<Flight> flights = await WebServices.fetchMoreFlights(client: client, iataCode: iataCode, offset: offset);
 
     flightList += flights.map((flight) => FlightViewModel(flight: flight)).toList();
 
