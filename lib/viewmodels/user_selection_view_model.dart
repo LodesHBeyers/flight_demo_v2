@@ -7,7 +7,5 @@ class UserSelectionViewModel extends ChangeNotifier{
 
   void setSelectedAirport(AirportViewModel airport){
     selectedAirport = airport;
-
-    notifyListeners();
   }
 }
