@@ -24,7 +24,7 @@ class TestWrapper extends StatelessWidget {
         ),
       ],
       child: MaterialApp(
-        home: child,
+        home: Material(child: child),
       ),
     );
   }
