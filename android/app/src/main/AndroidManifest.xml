@@ -3,6 +3,10 @@
    <application
         android:label="flight_demo_v2"
         android:icon="@mipmap/ic_launcher">
+
+       <meta-data android:name="com.google.android.geo.API_KEY"
+           android:value="AIzaSyDnH-TPHU1dsaBqtIGFl98FtyxlKOQ9WNA"/>
+
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
