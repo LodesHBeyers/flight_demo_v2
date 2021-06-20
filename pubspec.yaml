@@ -18,6 +18,9 @@ dependencies:
   provider: ^5.0.0
   intl: ^0.17.0
   google_maps_flutter: ^2.0.6
+  connectivity: ^3.0.6
+  flutter_geocoder: ^0.2.2-nullsafety
+  geolocator: ^7.1.0
 
 dev_dependencies:
 
