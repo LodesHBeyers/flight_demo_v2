@@ -9,7 +9,7 @@ final Flight mockFlight = Flight(
   departureDateTime:DateTime.now(),
   departureTerminal: '',
   departureGate: '',
-  arrivalAirport: '',
+  arrivalAirport: 'ArrivalAirport',
   arrivalTimeZone: '',
   arrivalDateTime:DateTime.now(),
   airlineName: '',
