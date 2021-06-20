@@ -91,11 +91,14 @@ class _FlightDetailScreenState extends State<FlightDetailScreen> {
   }
 
   String getTimeInHoursMins(int mins) {
-    final hrs = (mins / 60).floor();
+    final hrs = ((mins / 60).floor());
     final mnts = (mins - (hrs * 60));
-    final String minutes =
+    String minutes =
         mnts.toString().length == 1 ? '0$mnts' : mnts.toString();
-    final hours = hrs.toString();
+    String hours = hrs.toString();
+    if(hours[0] == '-'){
+      hours = hours.substring(1);
+    }
     return '$hours:$minutes';
   }
 
@@ -182,7 +185,7 @@ class _FlightDetailScreenState extends State<FlightDetailScreen> {
                     Container(
                       width: size.width * .26,
                       child: Text(
-                        'South African/Europe',
+                        widget.flight.departureTimeZone,
                         style: TextStyle(fontSize: 12, color: Colors.grey),
                       ),
                     ),
