@@ -1,5 +1,6 @@
 import 'package:flight_demo_v2/helpers/date_time_formatter.dart';
 import 'package:flight_demo_v2/viewmodels/flights_view_model.dart';
+import 'package:flight_demo_v2/views/flight_detail_view.dart';
 import 'package:flutter/material.dart';
 
 class FlightCard extends StatelessWidget {
@@ -21,7 +22,16 @@ class FlightCard extends StatelessWidget {
         : unknownDateTime;
 
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (_) => FlightDetailScreen(
+              flight: flightViewModel,
+            ),
+          ),
+        );
+      },
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -76,7 +86,7 @@ class FlightCard extends StatelessWidget {
                               flightViewModel.departureAirport,
                               overflow: TextOverflow.ellipsis,
                               maxLines: 2,
-                              style: TextStyle(color: Color(0xffa0994b)),
+                              style: TextStyle(color: Colors.blue),
                             ),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -123,7 +133,7 @@ class FlightCard extends StatelessWidget {
                               overflow: TextOverflow.ellipsis,
                               maxLines: 2,
                               textAlign: TextAlign.right,
-                              style: TextStyle(color: Color(0xffa0994b)),
+                              style: TextStyle(color: Colors.blue),
                             ),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.end,
