@@ -92,13 +92,13 @@ class FlightCard extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  departureDateTime['date'],
-                                  style: TextStyle(color: Color(0xff202526)),
+                                  departureDateTime['time'],
+                                  style: TextStyle(color: Colors.black54),
                                 ),
                                 Text(
-                                  departureDateTime['time'],
-                                  style: TextStyle(color: Color(0xfff0f9ca)),
-                                )
+                                  departureDateTime['date'],
+                                  style: TextStyle(color: Colors.black54),
+                                ),
                               ],
                             )
                           ],
@@ -139,13 +139,13 @@ class FlightCard extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.end,
                               children: [
                                 Text(
-                                  arrivalDateTime['date'],
-                                  style: TextStyle(color: Color(0xff202526)),
+                                  arrivalDateTime['time'],
+                                  style: TextStyle(color: Colors.black54),
                                 ),
                                 Text(
-                                  arrivalDateTime['time'],
-                                  style: TextStyle(color: Color(0xfff0f9ca)),
-                                )
+                                  arrivalDateTime['date'],
+                                  style: TextStyle(color: Colors.black54),
+                                ),
                               ],
                             )
                           ],
