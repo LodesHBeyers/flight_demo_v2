@@ -109,13 +109,10 @@ class _AirportSelectScreenState extends State<AirportSelectScreen> {
   Widget _renderDisplay(List<AirportViewModel> list) {
     switch (state) {
       case ProviderState.Loading:
-        print('Loading');
         return _renderLoad();
       case ProviderState.Error:
-        print('Error');
         return _renderError();
       case ProviderState.Loaded:
-        print('Loaded');
         return _renderAirportSelect(context, list);
     }
   }
