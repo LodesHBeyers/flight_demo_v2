@@ -9,10 +9,11 @@ void main() {
     'Given MapsContainer When rendered Should display GoogleMap',
         (WidgetTester tester) async {
       Widget widget = TestWrapper(
-        child: MapsContainer(),
+        child: MapsContainer(arrivalLatLng: LatLng(22.23, 44.4456), departureLatLng: LatLng(22.23, 44.4456),),
       );
 
       await tester.pumpWidget(widget);
+      await tester.pumpAndSettle();
 
       expect(find.byType(GoogleMap), findsOneWidget);
     },
