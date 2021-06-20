@@ -15,7 +15,6 @@ import '../test_helpers/mock_flight.dart';
 import '../test_helpers/test_wrapper.dart';
 import 'flight_detail_screen_test.mocks.dart';
 
-@GenerateMocks([LocalGeocoding])
 void main() {
   testWidgets(
     'Given FlightDetailScreen When loading Should display CircularProgressIndicator',
