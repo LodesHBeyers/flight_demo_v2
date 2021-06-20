@@ -1,6 +1,6 @@
 import 'package:flight_demo_v2/helpers/date_time_formatter.dart';
 import 'package:flight_demo_v2/viewmodels/flights_view_model.dart';
-import 'package:flight_demo_v2/views/flight_detail_view.dart';
+import 'package:flight_demo_v2/views/flight_detail_screen.dart';
 import 'package:flutter/material.dart';
 
 class FlightCard extends StatelessWidget {
